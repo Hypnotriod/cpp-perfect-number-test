@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "g++.exe",
+            "args": [
+                "${workspaceFolder}\\main.c",
+                "-o",
+                "${workspaceFolder}\\main.exe",
+                "-O3",
+                "-DNDEBUG",
+                "-march=native", // https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build Debug",
+            "command": "g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\main.c",
+                "-o",
+                "${workspaceFolder}\\main.exe"
+            ],
+            "options": {
+                "cwd": "C:/cygwin64/bin"
+            },
+            "problemMatcher": "$gcc",
+            "group": "build"
+        },
+        {
+            "label": "Launch",
+            "command": "${workspaceFolder}\\main.exe",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}

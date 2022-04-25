@@ -1,0 +1,11 @@
+{
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/*",
+    ],
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.associations": {
+        "*.c": "c",
+        "*.h": "c",
+    }
+}
